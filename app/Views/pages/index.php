@@ -8,35 +8,16 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-lg-6">
             <table class="table table-bordered table-hover">
-                <thead class="bg-indigo">
+                <thead class="bg-indigo text-center">
                     <tr>
-                        <th>#</th>
-                        <th>First</th>
-                        <th>Last</th>
-                        <th>Handle</th>
+                        <th>No</th>
+                        <th>Jenis Kegiatan</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th>3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>

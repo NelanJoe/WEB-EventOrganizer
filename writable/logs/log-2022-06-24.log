@@ -1,3 +1,56 @@
 CRITICAL - 2022-06-24 16:16:54 --> Call to undefined function CodeIgniter\locale_set_default()
 in SYSTEMPATH\CodeIgniter.php on line 193.
  1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-06-24 09:47:06 --> Access level to App\Models\AdminModel::$db must be protected (as in class CodeIgniter\Model) or weaker
+in APPPATH\Models\AdminModel.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-06-24 09:48:17 --> Access level to App\Models\AdminModel::$db must be protected (as in class CodeIgniter\Model) or weaker
+in APPPATH\Models\AdminModel.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-06-24 09:53:12 --> Undefined variable: jKegiatan
+in APPPATH\Views\pages\index.php on line 22.
+ 1 APPPATH\Views\pages\index.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jKegiatan', 'APPPATH\\Views\\pages\\index.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(21): view('pages/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-24 09:57:17 --> Undefined variable: jenis
+in APPPATH\Views\pages\index.php on line 20.
+ 1 APPPATH\Views\pages\index.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jenis', 'APPPATH\\Views\\pages\\index.php', 20, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(19): view('pages/index')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-24 10:01:19 --> Undefined variable: jenis
+in APPPATH\Views\pages\index.php on line 20.
+ 1 APPPATH\Views\pages\index.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jenis', 'APPPATH\\Views\\pages\\index.php', 20, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(19): view('pages/index')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-24 10:17:37 --> Call to undefined method CodeIgniter\View\View::extends()
+in APPPATH\Views\jenis\index.php on line 1.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('jenis/index', [], true)
+ 4 APPPATH\Controllers\Admin.php(26): view('jenis/index')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->jenis()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
