@@ -13,7 +13,8 @@
                  <img src="<?= base_url('dist/img/user1-128x128.jpg') ?>" class="img-circle elevation-1" alt="User Image">
              </div>
              <div class="info">
-                 <a href="#" class="d-block text-white">John Doe</a>
+                 <a href="#" class="d-block text-white"><?= ucfirst(user()->username) ?></a>
+
              </div>
          </div>
 
@@ -37,6 +38,12 @@
                              </a>
                          </li>
                      </ul>
+                 </li>
+                 <li class="nav-item">
+                     <a href="<?= route_to('logout') ?>" class="nav-link text-white">
+                         <i class="far fa-circle nav-icon"></i>
+                         <p>Logout</p>
+                     </a>
                  </li>
              </ul>
          </nav>

@@ -10,4 +10,7 @@ class Admin extends BaseController
     {
         return view('pages/index');
     }
+    
+    
+
 }

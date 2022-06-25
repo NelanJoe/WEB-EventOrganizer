@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col">
             <table class="table table-bordered table-hover">
-                <thead class="bg-indigo">
+                <thead class="bg-dark">
                     <tr>
                         <th>#</th>
                         <th>First</th>
