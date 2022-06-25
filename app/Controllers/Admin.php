@@ -20,9 +20,9 @@ class Admin extends BaseController
 
     public function jenis()
     {
-        // $data = array(
-        //     'jenis' => $this->adminModel->getAll()
-        // );
-        return view('jenis/index');
+        $data = array(
+            'jenis' => $this->adminModel->getAll()
+        );
+        return view('jenis/index', $data);
     }
 }

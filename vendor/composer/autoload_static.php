@@ -7,16 +7,17 @@ namespace Composer\Autoload;
 class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
 {
     public static $files = array (
-        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '9b38cf48e83f5d8f60375221cd213eee' => __DIR__ . '/..' . '/phpstan/phpstan/bootstrap.php',
+        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
-        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '3917c79c5052b270641b5a200963dbc2' => __DIR__ . '/..' . '/kint-php/kint/init.php',
         '38143a9afc50997d55e4815db8489d1c' => __DIR__ . '/..' . '/rector/rector/bootstrap.php',
@@ -39,6 +40,7 @@ class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
         array (
             'Symfony\\Polyfill\\Php81\\' => 23,
             'Symfony\\Polyfill\\Php80\\' => 23,
+            'Symfony\\Polyfill\\Php73\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Grapheme\\' => 31,
@@ -69,6 +71,10 @@ class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
         array (
             'Nexus\\PHPUnit\\Extension\\' => 24,
             'Nexus\\CsConfig\\' => 15,
+        ),
+        'M' => 
+        array (
+            'Myth\\Auth\\' => 10,
         ),
         'L' => 
         array (
@@ -104,8 +110,8 @@ class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -122,6 +128,10 @@ class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
+        ),
+        'Symfony\\Polyfill\\Php73\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php73',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -218,6 +228,10 @@ class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
         'Nexus\\CsConfig\\' => 
         array (
             0 => __DIR__ . '/..' . '/nexusphp/cs-config/src',
+        ),
+        'Myth\\Auth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myth/auth/src',
         ),
         'Laminas\\Escaper\\' => 
         array (
@@ -1204,6 +1218,7 @@ class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
         'Faker\\Provider\\zh_TW\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/zh_TW/Text.php',
         'Faker\\UniqueGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/UniqueGenerator.php',
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/ValidGenerator.php',
+        'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Kint\\CallFinder' => __DIR__ . '/..' . '/kint-php/kint/src/CallFinder.php',
         'Kint\\Kint' => __DIR__ . '/..' . '/kint-php/kint/src/Kint.php',
         'Kint\\Parser\\ArrayLimitPlugin' => __DIR__ . '/..' . '/kint-php/kint/src/Parser/ArrayLimitPlugin.php',
@@ -1291,6 +1306,57 @@ class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
         'Laminas\\Escaper\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/ExceptionInterface.php',
         'Laminas\\Escaper\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/InvalidArgumentException.php',
         'Laminas\\Escaper\\Exception\\RuntimeException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/RuntimeException.php',
+        'Myth\\Auth\\AuthTrait' => __DIR__ . '/..' . '/myth/auth/src/AuthTrait.php',
+        'Myth\\Auth\\Authentication\\Activators\\ActivatorInterface' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Activators/ActivatorInterface.php',
+        'Myth\\Auth\\Authentication\\Activators\\BaseActivator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Activators/BaseActivator.php',
+        'Myth\\Auth\\Authentication\\Activators\\EmailActivator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Activators/EmailActivator.php',
+        'Myth\\Auth\\Authentication\\Activators\\UserActivator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Activators/UserActivator.php',
+        'Myth\\Auth\\Authentication\\AuthenticationBase' => __DIR__ . '/..' . '/myth/auth/src/Authentication/AuthenticationBase.php',
+        'Myth\\Auth\\Authentication\\AuthenticatorInterface' => __DIR__ . '/..' . '/myth/auth/src/Authentication/AuthenticatorInterface.php',
+        'Myth\\Auth\\Authentication\\LocalAuthenticator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/LocalAuthenticator.php',
+        'Myth\\Auth\\Authentication\\Passwords\\BaseValidator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Passwords/BaseValidator.php',
+        'Myth\\Auth\\Authentication\\Passwords\\CompositionValidator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Passwords/CompositionValidator.php',
+        'Myth\\Auth\\Authentication\\Passwords\\DictionaryValidator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Passwords/DictionaryValidator.php',
+        'Myth\\Auth\\Authentication\\Passwords\\NothingPersonalValidator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Passwords/NothingPersonalValidator.php',
+        'Myth\\Auth\\Authentication\\Passwords\\PasswordValidator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Passwords/PasswordValidator.php',
+        'Myth\\Auth\\Authentication\\Passwords\\PwnedValidator' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Passwords/PwnedValidator.php',
+        'Myth\\Auth\\Authentication\\Passwords\\ValidationRules' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Passwords/ValidationRules.php',
+        'Myth\\Auth\\Authentication\\Passwords\\ValidatorInterface' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Passwords/ValidatorInterface.php',
+        'Myth\\Auth\\Authentication\\Resetters\\BaseResetter' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Resetters/BaseResetter.php',
+        'Myth\\Auth\\Authentication\\Resetters\\EmailResetter' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Resetters/EmailResetter.php',
+        'Myth\\Auth\\Authentication\\Resetters\\ResetterInterface' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Resetters/ResetterInterface.php',
+        'Myth\\Auth\\Authentication\\Resetters\\UserResetter' => __DIR__ . '/..' . '/myth/auth/src/Authentication/Resetters/UserResetter.php',
+        'Myth\\Auth\\Authorization\\AuthorizeInterface' => __DIR__ . '/..' . '/myth/auth/src/Authorization/AuthorizeInterface.php',
+        'Myth\\Auth\\Authorization\\FlatAuthorization' => __DIR__ . '/..' . '/myth/auth/src/Authorization/FlatAuthorization.php',
+        'Myth\\Auth\\Authorization\\GroupModel' => __DIR__ . '/..' . '/myth/auth/src/Authorization/GroupModel.php',
+        'Myth\\Auth\\Authorization\\PermissionModel' => __DIR__ . '/..' . '/myth/auth/src/Authorization/PermissionModel.php',
+        'Myth\\Auth\\Collectors\\Auth' => __DIR__ . '/..' . '/myth/auth/src/Collectors/Auth.php',
+        'Myth\\Auth\\Commands\\ActivateUser' => __DIR__ . '/..' . '/myth/auth/src/Commands/ActivateUser.php',
+        'Myth\\Auth\\Commands\\CreateGroup' => __DIR__ . '/..' . '/myth/auth/src/Commands/CreateGroup.php',
+        'Myth\\Auth\\Commands\\CreateUser' => __DIR__ . '/..' . '/myth/auth/src/Commands/CreateUser.php',
+        'Myth\\Auth\\Commands\\HashPassword' => __DIR__ . '/..' . '/myth/auth/src/Commands/HashPassword.php',
+        'Myth\\Auth\\Commands\\ListGroups' => __DIR__ . '/..' . '/myth/auth/src/Commands/ListGroups.php',
+        'Myth\\Auth\\Commands\\Publish' => __DIR__ . '/..' . '/myth/auth/src/Commands/Publish.php',
+        'Myth\\Auth\\Commands\\SetPassword' => __DIR__ . '/..' . '/myth/auth/src/Commands/SetPassword.php',
+        'Myth\\Auth\\Config\\Auth' => __DIR__ . '/..' . '/myth/auth/src/Config/Auth.php',
+        'Myth\\Auth\\Config\\Registrar' => __DIR__ . '/..' . '/myth/auth/src/Config/Registrar.php',
+        'Myth\\Auth\\Config\\Services' => __DIR__ . '/..' . '/myth/auth/src/Config/Services.php',
+        'Myth\\Auth\\Controllers\\AuthController' => __DIR__ . '/..' . '/myth/auth/src/Controllers/AuthController.php',
+        'Myth\\Auth\\Entities\\User' => __DIR__ . '/..' . '/myth/auth/src/Entities/User.php',
+        'Myth\\Auth\\Exceptions\\AuthException' => __DIR__ . '/..' . '/myth/auth/src/Exceptions/AuthException.php',
+        'Myth\\Auth\\Exceptions\\ExceptionInterface' => __DIR__ . '/..' . '/myth/auth/src/Exceptions/ExceptionInterface.php',
+        'Myth\\Auth\\Exceptions\\PermissionException' => __DIR__ . '/..' . '/myth/auth/src/Exceptions/PermissionException.php',
+        'Myth\\Auth\\Exceptions\\UserNotFoundException' => __DIR__ . '/..' . '/myth/auth/src/Exceptions/UserNotFoundException.php',
+        'Myth\\Auth\\Filters\\LoginFilter' => __DIR__ . '/..' . '/myth/auth/src/Filters/LoginFilter.php',
+        'Myth\\Auth\\Filters\\PermissionFilter' => __DIR__ . '/..' . '/myth/auth/src/Filters/PermissionFilter.php',
+        'Myth\\Auth\\Filters\\RoleFilter' => __DIR__ . '/..' . '/myth/auth/src/Filters/RoleFilter.php',
+        'Myth\\Auth\\Models\\LoginModel' => __DIR__ . '/..' . '/myth/auth/src/Models/LoginModel.php',
+        'Myth\\Auth\\Models\\UserModel' => __DIR__ . '/..' . '/myth/auth/src/Models/UserModel.php',
+        'Myth\\Auth\\Password' => __DIR__ . '/..' . '/myth/auth/src/Password.php',
+        'Myth\\Auth\\Test\\AuthTestTrait' => __DIR__ . '/..' . '/myth/auth/src/Test/AuthTestTrait.php',
+        'Myth\\Auth\\Test\\Fakers\\GroupFaker' => __DIR__ . '/..' . '/myth/auth/src/Test/Fakers/GroupFaker.php',
+        'Myth\\Auth\\Test\\Fakers\\PermissionFaker' => __DIR__ . '/..' . '/myth/auth/src/Test/Fakers/PermissionFaker.php',
+        'Myth\\Auth\\Test\\Fakers\\UserFaker' => __DIR__ . '/..' . '/myth/auth/src/Test/Fakers/UserFaker.php',
         'Nexus\\CsConfig\\Factory' => __DIR__ . '/..' . '/nexusphp/cs-config/src/Factory.php',
         'Nexus\\CsConfig\\FixerGenerator' => __DIR__ . '/..' . '/nexusphp/cs-config/src/FixerGenerator.php',
         'Nexus\\CsConfig\\Fixer\\AbstractCustomFixer' => __DIR__ . '/..' . '/nexusphp/cs-config/src/Fixer/AbstractCustomFixer.php',
@@ -3174,6 +3240,7 @@ class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
         'Symfony\\Component\\EventDispatcher\\EventSubscriberInterface' => __DIR__ . '/..' . '/symfony/event-dispatcher/EventSubscriberInterface.php',
         'Symfony\\Component\\EventDispatcher\\GenericEvent' => __DIR__ . '/..' . '/symfony/event-dispatcher/GenericEvent.php',
         'Symfony\\Component\\EventDispatcher\\ImmutableEventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/ImmutableEventDispatcher.php',
+        'Symfony\\Component\\EventDispatcher\\LegacyEventDispatcherProxy' => __DIR__ . '/..' . '/symfony/event-dispatcher/LegacyEventDispatcherProxy.php',
         'Symfony\\Component\\Filesystem\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/filesystem/Exception/ExceptionInterface.php',
         'Symfony\\Component\\Filesystem\\Exception\\FileNotFoundException' => __DIR__ . '/..' . '/symfony/filesystem/Exception/FileNotFoundException.php',
         'Symfony\\Component\\Filesystem\\Exception\\IOException' => __DIR__ . '/..' . '/symfony/filesystem/Exception/IOException.php',
@@ -3267,6 +3334,7 @@ class ComposerStaticInitaefdcfc7ac484d8f7d0706d4633f2f02
         'Symfony\\Polyfill\\Intl\\Grapheme\\Grapheme' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/Grapheme.php',
         'Symfony\\Polyfill\\Intl\\Normalizer\\Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Normalizer.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
+        'Symfony\\Polyfill\\Php73\\Php73' => __DIR__ . '/..' . '/symfony/polyfill-php73/Php73.php',
         'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
         'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/PhpToken.php',
         'Symfony\\Polyfill\\Php81\\Php81' => __DIR__ . '/..' . '/symfony/polyfill-php81/Php81.php',
