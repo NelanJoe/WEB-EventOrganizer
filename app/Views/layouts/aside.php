@@ -21,20 +21,50 @@
          <!-- Sidebar Menu -->
          <nav class="mt-2">
              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                 <li class="nav-item">
+                     <a href="/" class="nav-link text-white">
+                         <i class="far fa-circle nav-icon"></i>
+                         <p>Dashboard</p>
+                     </a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="<?= route_to('pendaftaran') ?>" class="nav-link text-white">
+                         <i class="far fa-circle nav-icon"></i>
+                         <p>Pendaftaran</p>
+                     </a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="<?= route_to('kegiatan') ?>" class="nav-link text-white">
+                         <i class="far fa-circle nav-icon"></i>
+                         <p>Kegiatan</p>
+                     </a>
+                 </li>
 
-                 <li class="nav-item menu-open">
-                     <a href="#" class="nav-link active">
+                 <li class="nav-item">
+                     <a href="#" class="nav-link text-white">
                          <i class="nav-icon fas fa-tachometer-alt"></i>
                          <p>
-                             Dashboard
+                             Master
                              <i class="right fas fa-angle-left"></i>
                          </p>
                      </a>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="" class="nav-link text-white">
+                             <a href="<?= route_to('kategori-peserta') ?>" class="nav-link text-white">
                                  <i class="far fa-circle nav-icon"></i>
-                                 <p>Dashboard</p>
+                                 <p>Kategori Peserta</p>
+                             </a>
+                         </li>
+                         <li class="nav-item">
+                             <a href="<?= route_to('jenis-kegiatan') ?>" class="nav-link text-white">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>Jenis Kegiatan</p>
+                             </a>
+                         </li>
+                         <li class="nav-item">
+                             <a href="<?= route_to('user') ?>" class="nav-link text-white">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>User</p>
                              </a>
                          </li>
                      </ul>

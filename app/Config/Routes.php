@@ -37,6 +37,39 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->group('', ['filter' => 'login'], function ($routes) {
     $routes->get('/', 'Home::index');
+
+
+    // Content Management System
+    // Jenis Kegiatan
+    $routes->group('/jenis-kegiatan', function ($routes) {
+        $routes->get('/', 'JenisKegiatan::index');
+    });
+    // End Jenis Kegiatan
+
+    // Kategori Peserta
+    $routes->group('/kategori-peserta', function ($routes) {
+        $routes->get('/', 'KategoriPeserta::index');
+    });
+    // End Kategori Peserta
+
+    // Kegiatan
+    $routes->group('/kegiatan', function ($routes) {
+        $routes->get('/', 'Kegiatan::index');
+    });
+    // End Kegiatan
+
+    // Pendaftaran
+    $routes->group('/pendaftaran', function ($routes) {
+        $routes->get('/', 'Pendaftaran::index');
+    });
+    // End Kegiatan
+
+    // User
+    $routes->group('/user', function ($routes) {
+        $routes->get('/', 'User::index');
+    });
+    // End User
+    // End Content Management System
 });
 
 /*
