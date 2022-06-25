@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-lg-6">
             <table class="table table-bordered table-hover">
-                <thead class="bg-indigo text-center">
+                <thead class="bg-dark">
                     <tr>
                         <th>No</th>
                         <th>Jenis Kegiatan</th>

@@ -37,7 +37,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 $routes->group('', ['filter' => 'login'], function ($routes) {
-    $routes->get('/test/test', 'Home::index');
+    $routes->get('/', 'Home::index');
     $routes->get('/admin', 'Admin::index');
     $routes->get('/admin/jenis', 'Admin::jenis');
 });
