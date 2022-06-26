@@ -54,6 +54,11 @@ $routes->group('', ['filter' => 'login'], function ($routes) {
     // Kategori Peserta
     $routes->group('/kategori-peserta', function ($routes) {
         $routes->get('/', 'KategoriPeserta::index');
+        $routes->get('create', 'KategoriPeserta::create');
+        $routes->post('store', 'KategoriPeserta::store');
+        $routes->get('edit/{id}', 'KategoriPeserta::edit');
+        $routes->post('update/{id}', 'KategoriPeserta::update');
+        $routes->get('delete/(:num)', 'KategoriPeserta::delete/$1');
     });
     // End Kategori Peserta
 
