@@ -19,7 +19,7 @@
                             </div>
                         <?php endif; ?>
                         <div class="card-header">
-                            <h3 class="card-title">Tambah Kategori</h3>
+                            <h3 class="card-title">Edit Kategori</h3>
 
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -28,12 +28,12 @@
                             </div>
                         </div>
 
-                        <form method="post" action="<?= base_url('kategori-peserta/store') ?>">
+                        <form method="post" action="<?= base_url('kategori-peserta/update/' . $kategoriPeserta['id']) ?>">
                             <?= csrf_field(); ?>
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="nama">Nama</label>
-                                    <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama'); ?>">
+                                    <input type="text" class="form-control" id="nama" name="nama" value="<?= $kategoriPeserta['nama'] ?>">
                                 </div>
                             </div>
                             <!-- /.card-body -->
