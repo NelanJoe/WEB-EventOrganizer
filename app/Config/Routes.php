@@ -45,6 +45,7 @@ $routes->group('', ['filter' => 'login'], function ($routes) {
         $routes->get('/', 'JenisKegiatan::index');
         $routes->get('create', 'JenisKegiatan::create');
         $routes->post('save', 'JenisKegiatan::save');
+        $routes->post('update', 'JenisKegiatan::update');
         $routes->get('edit/(:num)', 'JenisKegiatan::edit/$1');
         $routes->get('detail/(:num)', 'JenisKegiatan::detail/$1');
         $routes->get('delete/(:num)', 'JenisKegiatan::delete/$1');

@@ -8,7 +8,7 @@
                         <h4>Edit Jenis Kegiatan</h4>
                     </div>
                     <div class="card-body">
-                        <form action="<?=base_url('jenis-kegiatan/save')?>" method="post">
+                        <form action="<?=base_url('jenis-kegiatan/update')?>" method="post">
                             <div class="form-group">
                                 <label for="nama">Nama Jenis Kegiatan</label>
                                 <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Jenis Kegiatan" value="<?= $kegiatan['nama'] ?>">

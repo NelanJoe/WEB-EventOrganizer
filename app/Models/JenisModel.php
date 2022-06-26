@@ -27,4 +27,9 @@ class JenisModel extends Model
     {
         return $this->db->table($this->table)->insert($data);
     }
+
+    public function updateKegiatan($data, $id)
+    {
+        return $this->db->table($this->table)->update($data, array('id' => $id));
+    }
 }
