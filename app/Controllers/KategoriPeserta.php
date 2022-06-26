@@ -81,5 +81,4 @@ class KategoriPeserta extends BaseController
         session()->setFlashdata('message', 'Hapus Data Kategori Berhasil');
         return redirect()->to('/kategori-peserta');
     }
-    
 }
