@@ -10,7 +10,7 @@
                 <div class="col-lg-4">
                     <div class="info-box bg-light">
                         <div class="info-box-content">
-                            <span class="info-box-text text-muted">Nama: <?= $kegiatan['nama'] ?></span>
+                            <span class="info-box-text text-muted">Nama: <?= $jenis['nama'] ?></span>
                             <a href="/jenis-kegiatan">Back</a>
                         </div>
                     </div>

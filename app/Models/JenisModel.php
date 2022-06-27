@@ -6,30 +6,37 @@ use CodeIgniter\Model;
 
 class JenisModel extends Model
 {
-    protected $id = 'id';
-    protected $table = 'jenis_kegiatan';
-    protected $allowField = ['nama'];
+    protected $DBGroup          = 'default';
+    protected $table            = 'jenis_kegiatan';
+    protected $primaryKey       = 'id';
+    protected $useAutoIncrement = true;
+    protected $insertID         = 0;
+    protected $returnType       = 'array';
+    protected $useSoftDeletes   = false;
+    protected $protectFields    = true;
+    protected $allowedFields    = ['nama'];
 
-    //    Buat data get all jenis kegiatan
-    public function getAll()
-    {
-        return $this->findAll();
-    }
+    // Dates
+    protected $useTimestamps = false;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
 
-    //    Buat model get data by id jenis kegiatan
-    public function getJenisId($id)
-    {
-        return $this->where(['id' => $id])->first();
-    }
+    // Validation
+    protected $validationRules      = [];
+    protected $validationMessages   = [];
+    protected $skipValidation       = false;
+    protected $cleanValidationRules = true;
 
-    //    Buat model insert data jenis kegiatan
-    public function insertKegiatan($data)
-    {
-        return $this->db->table($this->table)->insert($data);
-    }
-
-    public function updateKegiatan($data, $id)
-    {
-        return $this->db->table($this->table)->update($data, array('id' => $id));
-    }
+    // Callbacks
+    protected $allowCallbacks = true;
+    protected $beforeInsert   = [];
+    protected $afterInsert    = [];
+    protected $beforeUpdate   = [];
+    protected $afterUpdate    = [];
+    protected $beforeFind     = [];
+    protected $afterFind      = [];
+    protected $beforeDelete   = [];
+    protected $afterDelete    = [];
 }

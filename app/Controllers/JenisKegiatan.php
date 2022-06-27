@@ -15,86 +15,95 @@ class JenisKegiatan extends BaseController
         $this->jenisModel = new JenisModel();
     }
 
+    // buat fungsi index
     public function index()
     {
         $data = [
-            'jenisKegiatan' => $this->jenisModel->getAll(),
+            'title' => 'Jenis Kegiatan',
+            'jenis' => $this->jenisModel->findAll(),
         ];
         return view('pages/master/jenis-kegiatan/index', $data);
     }
 
-    //    Buat fungsi untuk form tambah data
+    // buat fungsi detail
+    public function detail($id)
+    {
+        // if with throw
+        if (!$jenis = $this->jenisModel->find($id)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Jenis Kegiatan dengan {$id} tidak ditemukan");
+        } else {
+            $data = [
+                'title' => 'Detail Jenis Kegiatan',
+                'jenis' => $jenis,
+            ];
+            return view('pages/master/jenis-kegiatan/detail', $data);
+        }
+    }
+
+    // buat fungsi create
     public function create()
     {
         $data = [
-            'validation' => \Config\Services::validation()
+            'title' => 'Tambah Jenis Kegiatan',
         ];
-        return view('pages/master/jenis-kegiatan/create');
+        return view('pages/master/jenis-kegiatan/create', $data);
     }
 
-    //    Buat fungsi untuk menyimpan data kegiatan
-    public function save()
+    // buat fungsi store
+    public function store()
     {
-        if (!$this->validate([
+        if ($this->validate([
             'nama' => 'required|min_length[3]|max_length[255]',
         ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('/jenis-kegiatan/create')->withInput()->with('validation', $validation);
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+            ];
+            session()->setFlashdata('success_add', 'Data berhasil ditambahkan');
+            $this->jenisModel->insert($data);
+            return redirect()->to('/jenis-kegiatan');
+        } else {
+            return redirect()->to('/jenis-kegiatan/create');
         }
-        $data = [
-            'nama' => $this->request->getPost('nama'),
-        ];
-        session()->setFlashdata('success_add', 'Data berhasil ditambahkan');
-        $this->jenisModel->insertKegiatan($data);
-        return redirect()->to('/jenis-kegiatan');
     }
 
-    //    Buat fungsi untuk form detail data
-    public function detail($id)
+    // buat fungsi delete
+    public function delete($id = null)
     {
-        $data = [
-            'kegiatan' => $this->jenisModel->getJenisId($id)
-        ];
-        if (empty($data['kegiatan'])) {
+        if (!$id = $this->jenisModel->find($id)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException("Jenis Kegiatan dengan {$id} tidak ditemukan");
+        } else {
+            $this->jenisModel->delete($id);
+            session()->setFlashdata('success_delete', 'Data berhasil dihapus');
+            return redirect()->to('/jenis-kegiatan')->with('success', 'Data berhasil dihapus');
         }
-        return view('pages/master/jenis-kegiatan/detail', $data);
     }
 
 
+    // buat fungsi edit
+    public function edit($id = null)
+    {
 
-    //    Buat fungsi untuk form edit data
-    public function edit($id) {
         $data = [
-            'kegiatan' => $this->jenisModel->getJenisId($id),
-            'validation' => \Config\Services::validation()
+            'title' => 'Edit Jenis Kegiatan',
+            'jenis' => $this->jenisModel->find($id),
         ];
-        if (empty($data['kegiatan'])) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException("Jenis Kegiatan dengan {$id} tidak ditemukan");
-        }
+
         return view('pages/master/jenis-kegiatan/edit', $data);
     }
 
-    //    Buat fungsi untuk update data kegiatan
-    public function update() {
+    // buat fungsi update
+    public function update($id = null)
+    {
         if (!$this->validate([
             'nama' => 'required|min_length[3]|max_length[255]',
         ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('/jenis-kegiatan/edit/' . $this->request->getPost('id'))->withInput()->with('validation', $validation);
+            return redirect()->to('/jenis-kegiatan/edit/' . $id)->withInput()->with('error', $this->validator->getErrors());
         }
         $data = [
             'nama' => $this->request->getPost('nama'),
         ];
         session()->setFlashdata('success_update', 'Data berhasil diubah');
-        $this->jenisModel->updateKegiatan($data, $this->request->getPost('id'));
-        return redirect()->to('/jenis-kegiatan');
-    }
-
-    //    Buat fungsi untuk delete data
-    public function delete($id) {
-        $this->jenisModel->delete($id);
-        session()->setFlashdata('success_delete', 'Data berhasil dihapus');
-        return redirect()->to('/jenis-kegiatan');
+        $this->jenisModel->update($id, $data);
+        return redirect()->to('/jenis-kegiatan')->with('success', 'Data berhasil diubah');
     }
 }
