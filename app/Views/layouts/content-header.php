@@ -7,8 +7,11 @@
              </div>
              <div class="col-sm-6">
                  <ol class="breadcrumb float-sm-right">
-                     <li class="breadcrumb-item"><a href="<?= base_url('/') ?>">Home</a></li>
-                     <li class="breadcrumb-item active">Dashboard</li>
+                     <li class="breadcrumb-item"><a href="<?= base_url('/'); ?>">Home</a></li>
+                     <li class="breadcrumb-item active">
+                         <?php $url = str_replace('-', ' ', explode('/', current_url())[4]) ?>
+                         <?= ucwords($url, " \t\r\n\f\v'") ?>
+                     </li>
                  </ol>
              </div>
          </div>

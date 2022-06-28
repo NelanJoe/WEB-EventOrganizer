@@ -1,11 +1,21 @@
 <?= $this->extend('layouts/templates') ?>
 <?= $this->section('content') ?>
 <div class="container-fluid">
+    <?php if (!empty(session()->getFlashdata('error'))) : ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <h4>Periksa Entrian Form</h4>
+            </hr />
+            <?php echo session()->getFlashdata('error'); ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php endif; ?>
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-                <div class="card-header">
-                    <h4>Tambah Jenis Kegiatan</h4>
+                <div class="card-header bg-primary">
+                    <h4>Edit Jenis Kegiatan</h4>
                 </div>
                 <div class="card-body">
                     <form action="<?= base_url('jenis-kegiatan/update/' . $jenis['id']) ?>" method="post">

@@ -33,7 +33,7 @@
                         <h3 class="card-title mr-4">Kegiatan</h3>
                         <a class="btn btn-primary btn-sm" href="<?= base_url('jenis-kegiatan/create') ?>">
                             <i class="fas fa-plus"></i>
-                            Add</a>
+                            Tambah Kegiatan</a>
                     </div>
                     <div class="car-body">
                         <div class="table-responsive">

@@ -52,17 +52,24 @@ class JenisKegiatan extends BaseController
     // buat fungsi store
     public function store()
     {
-        if ($this->validate([
-            'nama' => 'required|min_length[3]|max_length[255]',
+        if (!$this->validate([
+            'nama' => [
+                'rules' => 'required|is_unique[jenis_kegiatan.nama]',
+                'errors' => [
+                    'required' => 'Field {field} harus diisi',
+                    'is_unique' => 'Field {field} sudah ada',
+                ],
+            ],
         ])) {
-            $data = [
-                'nama' => $this->request->getPost('nama'),
-            ];
-            session()->setFlashdata('success_add', 'Data berhasil ditambahkan');
-            $this->jenisModel->insert($data);
-            return redirect()->to('/jenis-kegiatan');
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
         } else {
-            return redirect()->to('/jenis-kegiatan/create');
+            $data = [
+                'nama' => $this->request->getPost('nama')
+            ];
+            $this->jenisModel->insert($data);
+            session()->setFlashdata('success_add', 'Data berhasil ditambahkan');
+            return redirect()->to('/jenis-kegiatan');
         }
     }
 
@@ -95,15 +102,23 @@ class JenisKegiatan extends BaseController
     public function update($id = null)
     {
         if (!$this->validate([
-            'nama' => 'required|min_length[3]|max_length[255]',
+            'nama' => [
+                'rules' => 'required|is_unique[jenis_kegiatan.nama]',
+                'errors' => [
+                    'required' => 'Field {field} Harus diisi',
+                    'is_unique' => 'Field {field} Sudah ada',
+                ],
+            ],
         ])) {
-            return redirect()->to('/jenis-kegiatan/edit/' . $id)->withInput()->with('error', $this->validator->getErrors());
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        } else {
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+            ];
+            $this->jenisModel->update($id, $data);
+            session()->setFlashdata('success_update', 'Data berhasil diubah');
+            return redirect()->to('/jenis-kegiatan');
         }
-        $data = [
-            'nama' => $this->request->getPost('nama'),
-        ];
-        session()->setFlashdata('success_update', 'Data berhasil diubah');
-        $this->jenisModel->update($id, $data);
-        return redirect()->to('/jenis-kegiatan')->with('success', 'Data berhasil diubah');
     }
 }
