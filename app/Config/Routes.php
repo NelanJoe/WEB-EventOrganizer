@@ -78,6 +78,9 @@ $routes->group('', ['filter' => 'login'], function ($routes) {
     // User
     $routes->group('/user', function ($routes) {
         $routes->get('/', 'User::index');
+        $routes->get('detail/(:num)', 'User::detail/$1');
+        $routes->get('edit/(:num)', 'User::edit/$1');
+        $routes->post('update/(:num)', 'User::update/$1');
     });
     // End User
     // End Content Management System
