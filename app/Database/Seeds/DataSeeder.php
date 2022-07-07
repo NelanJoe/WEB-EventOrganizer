@@ -11,5 +11,6 @@ class DataSeeder extends Seeder
         $this->call('Users');
         $this->call('Jenis');
         $this->call('KategoriPeserta');
+        $this->call('kegiatan');
     }
 }

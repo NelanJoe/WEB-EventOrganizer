@@ -13,6 +13,7 @@ class Users extends Seeder
                 'email'  => 'admin@gmail.com',
                 'username' => 'admin',
                 'password_hash'  =>  '$2y$10$nqAaVKoNWmiWEsDv4vVokeLbwZhKYGU5MtzGkeMnfUu6Oezhq3t/e',
+                'role' => 'admin',
                 'active' => 1,
                 'force_pass_reset' => 0,
                 'created_at' => date('Y-m-d H:i:s'),
@@ -21,7 +22,8 @@ class Users extends Seeder
             [
                 'email'  => 'user@gmail.com',
                 'username' => 'user',
-                'password_hash'  =>  password_hash('user123', PASSWORD_DEFAULT),
+                'role' => 'member',
+                'password_hash'  =>   '$2y$10$nqAaVKoNWmiWEsDv4vVokeLbwZhKYGU5MtzGkeMnfUu6Oezhq3t/e',
                 'active' => 1,
                 'force_pass_reset' => 0,
                 'created_at' => date('Y-m-d H:i:s'),

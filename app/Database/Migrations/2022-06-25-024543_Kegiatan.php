@@ -20,6 +20,18 @@ class Kegiatan extends Migration
                 'type'           => 'VARCHAR',
                 'constraint'     => '200'
             ],
+            'tanggal_mulai'       => [
+                'type'           => 'DATE',
+                'null'           => true
+            ],
+            'waktu_mulai' => [
+                'type'           => 'TIME',
+                'null'           => true
+            ],
+            'waktu_selesai' => [
+                'type'           => 'TIME',
+                'null'           => true
+            ],
             'kapasitas'       => [
                 'type'           => 'INT',
             ],

@@ -36,7 +36,12 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-$routes->group('', ['filter' => 'login'], function ($routes) {
+$routes->get('/', 'Kegiatan::listPublic');
+$routes->get('/detail-kegiatan/(:num)', 'Kegiatan::detailPublic/$1');
+$routes->get('/daftar-kegiatan', 'Daftar::publicView');
+
+
+$routes->group('/cms', ['filter' => 'login'], function ($routes) {
     $routes->get('/', 'Home::index');
 
     // Content Management System
