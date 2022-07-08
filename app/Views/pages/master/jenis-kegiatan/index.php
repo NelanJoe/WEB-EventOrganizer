@@ -35,7 +35,7 @@
                             <i class="fas fa-plus"></i>
                             Tambah Kegiatan</a>
                     </div>
-                    <div class="car-body">
+                    <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table table-hover projects table-bordered">
                                 <thead>

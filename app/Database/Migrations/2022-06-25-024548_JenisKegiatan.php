@@ -8,7 +8,7 @@ class JenisKegiatan extends Migration
 {
     public function up()
     {
-        // Membuat kolom/field untuk tabel jenis kegiatan
+        // Membuat kolom/field untuk tabel kategori peseerta
         $this->forge->addField([
             'id'          => [
                 'type'           => 'INT',
@@ -27,13 +27,13 @@ class JenisKegiatan extends Migration
         // Membuat primary key
         $this->forge->addKey('id', TRUE);
 
-        // Membuat tabel daftar
+        // Membuat tabel kategori peserta
         $this->forge->createTable('jenis_kegiatan', TRUE);
     }
 
     public function down()
     {
-        /// menghapus tabel jenis kegiatan
+        /// menghapus tabel kategori peserta
         $this->forge->dropTable('jenis_kegiatan');
     }
 }
