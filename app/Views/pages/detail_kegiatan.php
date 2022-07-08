@@ -21,7 +21,8 @@
                             <p>Foto Flyer : <?= $detailKegiatan['foto_flyer'] ?></p>
                             <p>Jenis : <?= $detailKegiatan['jenis_id'] ?></p>
                         </div>
-                        <a href="/daftar-kegiatan" class="btn btn-primary btn-block">Daftar Sekarang</a>
+
+                        <a href="/daftar-kegiatan/<?= $detailKegiatan['id'] ?>" class="btn btn-primary btn-block">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>

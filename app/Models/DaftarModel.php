@@ -14,7 +14,7 @@ class DaftarModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    =  ["tanggal_daftar", "alasan", "users_id", "kegiatan_id", "kategori_peserta_id", "nosertifikat", "status"];
 
     // Dates
     protected $useTimestamps = false;

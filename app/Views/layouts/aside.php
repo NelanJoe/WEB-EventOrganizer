@@ -14,6 +14,7 @@
              </div>
              <div class="info">
                  <a href="#" class="d-block text-white"><?= ucfirst(user()->username) ?></a>
+                 <small> <?= user()->role ?></small>
 
              </div>
          </div>
@@ -21,54 +22,62 @@
          <!-- Sidebar Menu -->
          <nav class="mt-2">
              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                 <li class="nav-item">
-                     <a href="/" class="nav-link text-white">
-                         <i class="far fa-circle nav-icon"></i>
-                         <p>Dashboard</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?= route_to('pendaftaran') ?>" class="nav-link text-white">
-                         <i class="far fa-circle nav-icon"></i>
-                         <p>Pendaftaran</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?= route_to('kegiatan') ?>" class="nav-link text-white">
-                         <i class="far fa-circle nav-icon"></i>
-                         <p>Kegiatan</p>
-                     </a>
-                 </li>
-
-                 <li class="nav-item">
-                     <a href="#" class="nav-link text-white">
-                         <i class="nav-icon fas fa-tachometer-alt"></i>
-                         <p>
-                             Master
-                             <i class="right fas fa-angle-left"></i>
-                         </p>
-                     </a>
-                     <ul class="nav nav-treeview">
-                         <li class="nav-item">
-                             <a href="<?= route_to('kategori-peserta') ?>" class="nav-link text-white">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Kategori Peserta</p>
-                             </a>
-                         </li>
-                         <li class="nav-item">
-                             <a href="<?= route_to('jenis-kegiatan') ?>" class="nav-link text-white">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Jenis Kegiatan</p>
-                             </a>
-                         </li>
-                         <li class="nav-item">
-                             <a href="<?= route_to('user') ?>" class="nav-link text-white">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>User</p>
-                             </a>
-                         </li>
-                     </ul>
-                 </li>
+                 <?php if (user()->role === 'admin') : ?>
+                     <li class="nav-item">
+                         <a href="/cms" class="nav-link text-white">
+                             <i class="far fa-circle nav-icon"></i>
+                             <p>Dashboard</p>
+                         </a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="<?= route_to('cms/pendaftaran') ?>" class="nav-link text-white">
+                             <i class="far fa-circle nav-icon"></i>
+                             <p>Pendaftaran</p>
+                         </a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="<?= route_to('cms/kegiatan') ?>" class="nav-link text-white">
+                             <i class="far fa-circle nav-icon"></i>
+                             <p>Kegiatan</p>
+                         </a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link text-white">
+                             <i class="nav-icon fas fa-tachometer-alt"></i>
+                             <p>
+                                 Master
+                                 <i class="right fas fa-angle-left"></i>
+                             </p>
+                         </a>
+                         <ul class="nav nav-treeview">
+                             <li class="nav-item">
+                                 <a href="<?= route_to('cms/kategori-peserta') ?>" class="nav-link text-white">
+                                     <i class="far fa-circle nav-icon"></i>
+                                     <p>Kategori Peserta</p>
+                                 </a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="<?= route_to('cms/jenis-kegiatan') ?>" class="nav-link text-white">
+                                     <i class="far fa-circle nav-icon"></i>
+                                     <p>Jenis Kegiatan</p>
+                                 </a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="<?= route_to('cms/user') ?>" class="nav-link text-white">
+                                     <i class="far fa-circle nav-icon"></i>
+                                     <p>User</p>
+                                 </a>
+                             </li>
+                         </ul>
+                     </li>
+                 <?php else : ?>
+                     <li class="nav-item">
+                         <a href="cms/pendaftaran" class="nav-link text-white">
+                             <i class="far fa-circle nav-icon"></i>
+                             <p>Pendaftaran</p>
+                         </a>
+                     </li>
+                 <?php endif; ?>
 
                  <li class="nav-item">
                      <a href="<?= route_to('logout') ?>" class="nav-link text-white">

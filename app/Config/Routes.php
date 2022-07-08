@@ -38,15 +38,24 @@ $routes->set404Override();
 
 $routes->get('/', 'Kegiatan::listPublic');
 $routes->get('/detail-kegiatan/(:num)', 'Kegiatan::detailPublic/$1');
-$routes->get('/daftar-kegiatan', 'Daftar::publicView');
 
+
+$routes->group('', ['filter' => 'login'], function ($routes) {
+    $routes->get('/daftar-kegiatan/(:num)', 'Daftar::publicView/$1');
+
+    $routes->group('/daftar', function ($routes) {
+        $routes->post('store', 'Daftar::store');
+    });
+});
 
 $routes->group('/cms', ['filter' => 'login'], function ($routes) {
     $routes->get('/', 'Home::index');
 
+
+
     // Content Management System
     // Jenis Kegiatan
-    $routes->group('/jenis-kegiatan', function ($routes) {
+    $routes->group('jenis-kegiatan', function ($routes) {
         $routes->get('/', 'JenisKegiatan::index');
         $routes->get('create', 'JenisKegiatan::create');
         $routes->post('store', 'JenisKegiatan::store');
@@ -58,7 +67,7 @@ $routes->group('/cms', ['filter' => 'login'], function ($routes) {
     // End Jenis Kegiatan
 
     // Kategori Peserta
-    $routes->group('/kategori-peserta', function ($routes) {
+    $routes->group('kategori-peserta', function ($routes) {
         $routes->get('/', 'KategoriPeserta::index');
         $routes->get('create', 'KategoriPeserta::create');
         $routes->post('store', 'KategoriPeserta::store');
@@ -69,19 +78,19 @@ $routes->group('/cms', ['filter' => 'login'], function ($routes) {
     // End Kategori Peserta
 
     // Kegiatan
-    $routes->group('/kegiatan', function ($routes) {
+    $routes->group('kegiatan', function ($routes) {
         $routes->get('/', 'Kegiatan::index');
     });
     // End Kegiatan
 
     // Pendaftaran
-    $routes->group('/pendaftaran', function ($routes) {
+    $routes->group('pendaftaran', function ($routes) {
         $routes->get('/', 'Pendaftaran::index');
     });
     // End Kegiatan
 
     // User
-    $routes->group('/user', function ($routes) {
+    $routes->group('user', function ($routes) {
         $routes->get('/', 'User::index');
         $routes->get('detail/(:num)', 'User::detail/$1');
         $routes->get('edit/(:num)', 'User::edit/$1');
