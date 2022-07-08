@@ -248,3 +248,4 @@ fabric.properties
 /.php-cs-fixer.php
 *.log
 *.env
+.env

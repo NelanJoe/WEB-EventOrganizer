@@ -5,8 +5,9 @@
     <div class="container">
         <div class="row" style="margin-top:2rem">
             <div class="col-12 d-flex justify-content-center">
+
                 <div class="card" style="width: 30rem;">
-                    <form method="post" action="<?= base_url('daftar/store') ?>">
+                    <form method="post" action="<?= base_url('daftar/store/1') ?>">
 
                         <input type="hidden" id="kegiatan_id" name="kegiatan">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzO6FMZXobI9J-LGtvFLT_VsjX6oYWECCbKw&usqp=CAU" class="card-img-top" alt="...">

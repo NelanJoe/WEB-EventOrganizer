@@ -38,27 +38,31 @@ class Daftar extends BaseController
     public function store()
     {
 
-        // if (!$this->validate([
-        //     'nama' => [
-        //         'rules' => 'required',
-        //         'errors' => [
-        //             'required' => '{field} Harus diisi'
-        //         ]
-        //     ],
-        // ])) {
-        //     session()->setFlashdata('error', $this->validator->listErrors());
-        //     return redirect()->back()->withInput();
-        // }
+        if (!$this->validate([
+            'alasan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
 
         $this->daftar->insert([
             'tanggal_daftar' => date('Y-m-d'),
             'alasan' => $this->request->getVar('alasan'),
             'users_id' => user()->id,
             'kegiatan_id' => 1,
+            'kategori_peserta_id' => $this->request->getVar('kategoriPesertaId'),
             'nosertifikat' => "bacot",
             'status' => 1,
         ]);
 
-        return redirect()->to('/cms');
+        session()->setFlashdata('message', 'Pendaftaran Berhasil');
+
+        return redirect()->to('/');
     }
 }

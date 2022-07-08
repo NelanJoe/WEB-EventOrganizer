@@ -17,7 +17,12 @@ class Kegiatan extends BaseController
 
     public function index()
     {
-        return view('pages/kegiatan');
+        $data = [
+
+            'kegiatan' => $this->kegiatan->findAll(),
+        ];
+
+        return view('pages/kegiatan', $data);
     }
 
     public function listPublic()
