@@ -11,7 +11,7 @@
                     <div class="info-box bg-light">
                         <div class="info-box-content">
                             <span class="info-box-text text-muted">Nama: <?= $jenis['nama'] ?></span>
-                            <a href="cms/jenis-kegiatan">Back</a>
+                            <a href="<?= base_url('cms/jenis-kegiatan') ?>">Back</a>
                         </div>
                     </div>
                 </div>
