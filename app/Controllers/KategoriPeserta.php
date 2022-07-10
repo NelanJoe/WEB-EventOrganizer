@@ -45,7 +45,7 @@ class KategoriPeserta extends BaseController
             'nama' => $this->request->getVar('nama'),
         ]);
         session()->setFlashdata('message', 'Tambah Data Kategori Berhasil');
-        return redirect()->to('/kategori-peserta');
+        return redirect()->to('cms/kategori-peserta');
     }
 
     public function edit($id)
@@ -72,13 +72,13 @@ class KategoriPeserta extends BaseController
             'nama' => $this->request->getVar('nama'),
         ]);
         session()->setFlashdata('message', 'Update Data Kategori Berhasil');
-        return redirect()->to('/kategori-peserta');
+        return redirect()->to('cms/kategori-peserta');
     }
 
     public function delete($id)
     {
         $this->kategoriPeserta->delete($id);
         session()->setFlashdata('message', 'Hapus Data Kategori Berhasil');
-        return redirect()->to('/kategori-peserta');
+        return redirect()->to('cms/kategori-peserta');
     }
 }

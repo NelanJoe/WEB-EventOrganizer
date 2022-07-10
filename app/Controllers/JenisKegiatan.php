@@ -69,7 +69,7 @@ class JenisKegiatan extends BaseController
             ];
             $this->jenisModel->insert($data);
             session()->setFlashdata('success_add', 'Data berhasil ditambahkan');
-            return redirect()->to('/jenis-kegiatan');
+            return redirect()->to('cms/jenis-kegiatan');
         }
     }
 
@@ -81,7 +81,7 @@ class JenisKegiatan extends BaseController
         } else {
             $this->jenisModel->delete($id);
             session()->setFlashdata('success_delete', 'Data berhasil dihapus');
-            return redirect()->to('/jenis-kegiatan')->with('success', 'Data berhasil dihapus');
+            return redirect()->to('cms/jenis-kegiatan')->with('success', 'Data berhasil dihapus');
         }
     }
 
@@ -118,7 +118,7 @@ class JenisKegiatan extends BaseController
             ];
             $this->jenisModel->update($id, $data);
             session()->setFlashdata('success_update', 'Data berhasil diubah');
-            return redirect()->to('/jenis-kegiatan');
+            return redirect()->to('cms/jenis-kegiatan');
         }
     }
 }

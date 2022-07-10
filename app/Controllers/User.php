@@ -73,9 +73,9 @@ class User extends BaseController
                 'active' => $this->request->getPost('active'),
             ];
             $this->userAccountModel->update($id, $data);
-            return redirect()->to('/user');
+            return redirect()->to('cms/user');
         } else {
-            return redirect()->to('/user/edit/' . $id);
+            return redirect()->to('cms/user/edit/' . $id);
         }
         // $data = [
         //     'username' => $this->request->getPost('username'),
