@@ -28,7 +28,7 @@
                             </div>
                         </div>
 
-                        <form method="post" action="<?= base_url('kategori-peserta/update/' . $kategoriPeserta['id']) ?>">
+                        <form method="post" action="<?= base_url('cms/kategori-peserta/update/' . $kategoriPeserta['id']) ?>">
                             <?= csrf_field(); ?>
                             <div class="card-body">
                                 <div class="form-group">
@@ -39,7 +39,7 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <a href="<?= route_to('kategori-peserta') ?>" class="btn btn-secondary">Cancel</a>
+                                <a href="<?= route_to('cms/kategori-peserta') ?>" class="btn btn-secondary">Cancel</a>
                                 <input type="submit" value="Simpan" class="btn btn-success" />
                             </div>
                         </form>

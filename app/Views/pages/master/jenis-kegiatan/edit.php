@@ -18,14 +18,14 @@
                     <h4>Edit Jenis Kegiatan</h4>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('jenis-kegiatan/update/' . $jenis['id']) ?>" method="post">
+                    <form action="<?= base_url('cms/jenis-kegiatan/update/' . $jenis['id']) ?>" method="post">
                         <div class="form-group">
                             <label for="nama">Nama Jenis Kegiatan</label>
                             <input type="text" class="form-control" value="<?= $jenis['nama'] ?>" id="nama" name="nama" placeholder="Nama Jenis Kegiatan">
                         </div>
                         <div class="form-group d-flex">
                             <button type="submit" class="btn btn-primary mr-3">Submit</button>
-                            <a href="<?= base_url('jenis-kegiatan') ?>" class="btn btn-dark">Cancel</a>
+                            <a href="<?= base_url('cms/jenis-kegiatan') ?>" class="btn btn-dark">Cancel</a>
                         </div>
                     </form>
                 </div>

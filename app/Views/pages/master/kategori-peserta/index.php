@@ -48,12 +48,12 @@
                                 </td>
                                 <td class="project-actions text-right">
 
-                                    <a class="btn btn-info btn-sm" href="<?= base_url("kategori-peserta/edit/" . $row['id']) ?>">
+                                    <a class="btn btn-info btn-sm" href="<?= base_url("cms/kategori-peserta/edit/" . $row['id']) ?>">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Edit
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="<?= base_url("kategori-peserta/delete/" . $row['id']) ?>">
+                                    <a class="btn btn-danger btn-sm" href="<?= base_url("cms/kategori-peserta/delete/" . $row['id']) ?>">
                                         <i class="fas fa-trash">
                                         </i>
                                         Delete

@@ -8,7 +8,7 @@
                     <h4>Edit Users</h4>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('user/update/' . $users['id']) ?>" method="post">
+                    <form action="<?= base_url('cms/user/update/' . $users['id']) ?>" method="post">
                         <div class="form-group">
                             <label for="nama">Nama</label>
                             <input type="text" class="form-control" value="<?= $users['username'] ?>" id="username" name="username" placeholder="Nama User">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group d-flex">
                             <button type="submit" class="btn btn-primary mr-3">Submit</button>
-                            <a href="<?= base_url('user') ?>" class="btn btn-dark">Cancel</a>
+                            <a href="<?= base_url('cms/user') ?>" class="btn btn-dark">Cancel</a>
                         </div>
                     </form>
                 </div>

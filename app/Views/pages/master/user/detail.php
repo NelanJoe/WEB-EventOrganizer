@@ -19,7 +19,7 @@
                                     Active: <span class="badge badge-danger">Inactive</span>
                                 <?php endif; ?>
                             </span>
-                            <a href="/user">Back</a>
+                            <a href="cms/user">Back</a>
                         </div>
                     </div>
                 </div>

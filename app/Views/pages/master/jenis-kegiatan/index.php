@@ -31,7 +31,7 @@
                 <div class="card">
                     <div class="card-header d-flex align-items-center">
                         <h3 class="card-title mr-4">Kegiatan</h3>
-                        <a class="btn btn-primary btn-sm" href="<?= base_url('jenis-kegiatan/create') ?>">
+                        <a class="btn btn-primary btn-sm" href="<?= base_url('cms/jenis-kegiatan/create') ?>">
                             <i class="fas fa-plus"></i>
                             Tambah Kegiatan</a>
                     </div>
@@ -53,15 +53,15 @@
                                             </td>
                                             <td><?= $j['nama'] ?></td>
                                             <td>
-                                                <a href="<?= base_url('jenis-kegiatan/detail/' . $j['id']) ?>" class="btn btn-sm btn-info">
+                                                <a href="<?= base_url('cms/jenis-kegiatan/detail/' . $j['id']) ?>" class="btn btn-sm btn-info">
                                                     <i class="fas fa-folder"></i>
                                                     Detail
                                                 </a>
-                                                </a><a href="<?= base_url('jenis-kegiatan/edit/' . $j['id']) ?>" class="btn btn-sm btn-info">
+                                                </a><a href="<?= base_url('cms/jenis-kegiatan/edit/' . $j['id']) ?>" class="btn btn-sm btn-info">
                                                     <i class="fas fa-pencil-alt"></i>
                                                     Edit
                                                 </a>
-                                                <a href="<?= base_url('jenis-kegiatan/delete/' . $j['id']) ?>" class="btn btn-sm btn-danger">
+                                                <a href="<?= base_url('cms/jenis-kegiatan/delete/' . $j['id']) ?>" class="btn btn-sm btn-danger">
                                                     <i class="fas fa-trash"></i>
                                                     Delete
                                                 </a>

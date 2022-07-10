@@ -31,12 +31,12 @@
                                     <?php endif; ?>
                                 </td>
                                 <td>
-                                    <a class="btn btn-primary btn-sm" href="<?= base_url("user/detail/" . $user['id']) ?>">
+                                    <a class="btn btn-primary btn-sm" href="<?= base_url("cms/user/detail/" . $user['id']) ?>">
                                         <i class="fas fa-folder">
                                         </i>
                                         View
                                     </a>
-                                    <a class="btn btn-info btn-sm" href="<?= base_url("user/edit/" . $user['id']) ?>">
+                                    <a class="btn btn-info btn-sm" href="<?= base_url("cms/user/edit/" . $user['id']) ?>">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Edit

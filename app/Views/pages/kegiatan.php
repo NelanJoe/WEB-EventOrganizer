@@ -17,7 +17,7 @@
         <div class="card">
             <div class="card-header">
 
-                <a href="<?= base_url('/kategori-peserta/create'); ?>" class="btn btn-primary"> Tambah Kegiatan</a>
+                <a href="<?= base_url('cms/kategori-peserta/create'); ?>" class="btn btn-primary"> Tambah Kegiatan</a>
 
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -112,12 +112,12 @@
                                 </td>
                                 <td class="project-actions text-right d-flex">
 
-                                    <a class="btn btn-info btn-sm" href="<?= base_url("kategori-peserta/edit/" . $row['id']) ?>">
+                                    <a class="btn btn-info btn-sm" href="<?= base_url("cms/kategori-peserta/edit/" . $row['id']) ?>">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Edit
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="<?= base_url("kategori-peserta/delete/" . $row['id']) ?>">
+                                    <a class="btn btn-danger btn-sm" href="<?= base_url("cms/kategori-peserta/delete/" . $row['id']) ?>">
                                         <i class="fas fa-trash">
                                         </i>
                                         Delete
