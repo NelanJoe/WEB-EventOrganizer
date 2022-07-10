@@ -24,8 +24,12 @@ class Pendaftaran extends BaseController
 
     public function delete($id)
     {
-        $id = $this->pendaftaranModel->find($id);
-        $this->pendaftaranModel->delete($id);
-        return redirect()->to('cms/pendaftaran');
+        if (!$id = $this->pendaftaranModel->find($id)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Pendaftaran dengan {$id} tidak ditemukan");
+        } else {
+            $this->pendaftaranModel->delete($id);
+            session()->setFlashdata('success_delete', 'Data berhasil dihapus');
+            return redirect()->to('cms/pendaftaran')->with('success', 'Data berhasil dihapus');
+        }
     }
 }
