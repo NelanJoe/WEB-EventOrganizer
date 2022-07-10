@@ -14,7 +14,7 @@
         <div class="card">
             <div class="card-header">
 
-                <a href="<?= base_url('/kategori-peserta/create'); ?>" class="btn btn-primary"> Tambah Kategori</a>
+                <a href="<?= base_url('cms/kategori-peserta/create'); ?>" class="btn btn-primary"> Tambah Kategori</a>
 
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
