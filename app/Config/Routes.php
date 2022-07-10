@@ -44,7 +44,7 @@ $routes->group('', ['filter' => 'login'], function ($routes) {
     $routes->get('/daftar-kegiatan/(:num)', 'Daftar::publicView/$1');
 
     $routes->group('/daftar', function ($routes) {
-        $routes->post('store', 'Daftar::store');
+        $routes->post('store/(:num)', 'Daftar::store');
     });
 });
 
