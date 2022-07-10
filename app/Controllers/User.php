@@ -51,7 +51,7 @@ class User extends BaseController
             [
                 'username' => [
                     'label' => 'Username',
-                    'rules' => 'required|min_length[3]|max_length[20]|is_unique[users.username]',
+                    'rules' => 'required|min_length[3]|max_length[20]',
                     'errors' => [
                         'required' => '{field} harus diisi',
                         'min_length' => '{field} harus lebih dari {param} karakter',
@@ -77,11 +77,5 @@ class User extends BaseController
         } else {
             return redirect()->to('cms/user/edit/' . $id);
         }
-        // $data = [
-        //     'username' => $this->request->getPost('username'),
-        //     'active' => $this->request->getPost('active'),
-        // ];
-        // $this->userAccountModel->update($id, $data);
-        // return redirect()->to('/user');
     }
 }
