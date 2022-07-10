@@ -57,12 +57,19 @@ class Daftar extends BaseController
             'users_id' => user()->id,
             'kegiatan_id' => 1,
             'kategori_peserta_id' => $this->request->getVar('kategoriPesertaId'),
-            'nosertifikat' => "bacot",
+            'nosertifikat' => $this->request->getVar('nosertifikat'),
             'status' => 1,
         ]);
 
         session()->setFlashdata('message', 'Pendaftaran Berhasil');
 
+        return redirect()->to('/');
+    }
+
+    public function delete()
+    {
+        $this->daftar->delete($this->request->getVar('id'));
+        session()->setFlashdata('message', 'Pendaftaran Berhasil Dihapus');
         return redirect()->to('/');
     }
 }

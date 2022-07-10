@@ -21,4 +21,11 @@ class Pendaftaran extends BaseController
         ];
         return view("pages/pendaftaran/index", $data);
     }
+
+    public function delete($id)
+    {
+        $id = $this->pendaftaranModel->find($id);
+        $this->pendaftaranModel->delete($id);
+        return redirect()->to('cms/pendaftaran');
+    }
 }

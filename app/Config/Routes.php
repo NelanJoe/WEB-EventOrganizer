@@ -45,6 +45,7 @@ $routes->group('', ['filter' => 'login'], function ($routes) {
 
     $routes->group('/daftar', function ($routes) {
         $routes->post('store/(:num)', 'Daftar::store');
+        $routes->delete('delete/(:num)', 'Daftar::delete/$1');
     });
 });
 
@@ -86,6 +87,7 @@ $routes->group('/cms', ['filter' => 'login'], function ($routes) {
     // Pendaftaran
     $routes->group('pendaftaran', function ($routes) {
         $routes->get('/', 'Pendaftaran::index');
+        $routes->get('delete/(:num)', 'Pendaftaran::delete/$1');
     });
     // End Kegiatan
 

@@ -38,7 +38,7 @@
                                         </i>
                                         Edit
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="">
+                                    <a class="btn btn-danger btn-sm" href="<?= base_url('cms/pendaftaran/delete/' . $pd['id']) ?>">
                                         <i class="fas fa-trash"></i>
                                         Delete
                                     </a>
