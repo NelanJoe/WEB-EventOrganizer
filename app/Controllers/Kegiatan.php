@@ -32,7 +32,7 @@ class Kegiatan extends BaseController
             'kegiatan' => $this->kegiatan->findAll(),
         ];
 
-        return view('pages/daftar_kegiatan', $data);
+        return view('pages/landing-page/index', $data);
     }
 
     public function detailPublic($id = null)

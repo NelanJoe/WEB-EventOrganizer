@@ -52,8 +52,6 @@ $routes->group('', ['filter' => 'login'], function ($routes) {
 $routes->group('/cms', ['filter' => 'login'], function ($routes) {
     $routes->get('/', 'Home::index');
 
-
-
     // Content Management System
     // Jenis Kegiatan
     $routes->group('jenis-kegiatan', function ($routes) {
